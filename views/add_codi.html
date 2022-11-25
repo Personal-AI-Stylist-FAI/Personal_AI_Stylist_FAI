@@ -1,0 +1,30 @@
+<!-- 코디 추가 팝업 -->
+
+<div class="background2">
+    <div class="window2">
+        <div class="popup2">
+            <!-- 날짜 선택 -->
+            <form method="POST" action="/calendar/addcody" enctype="multipart/form-data">
+            <div class="date-picker2">
+                <h6 class="date-picker-ment2">1. 날짜를 선택하세요.</h6>
+                <input type="date" class="date-input2" name="date"></input>
+            </div>
+            <!-- 코디 사진 선택 -->
+            <div class="cody-picker2">
+                <div class="cody-label2">
+                    2. 코디 사진을 선택하세요.
+                    <!-- <span style="font-family: Material Icons;">restaurant</span> -->
+                </div>
+                <div>
+                    <input type="file" id="fileUpload2" class="imageupload2" name="addimage" accept="image/*" />
+                    <img id="previewImg2" width="200" />
+                </div>
+            </div>
+            <div class="btn-box2">
+                <button class="btn-add2" type=submit id="add2">코디 사진  추가하기</button>
+                <button class="btn-close2" type="button" id="close2">닫기</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

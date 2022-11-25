@@ -1,0 +1,266 @@
+<!doctype html>
+    {% include "head.html" %}
+    
+    <body data-spy="scroll" data-target="#navbar-menu" data-offset="110">
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+        <div class="culmn">
+            <!--Home page style-->
+
+            {% include "nav.html" %}
+
+            <!-- 'Calendar' section -->
+            <section id="features" class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_features fix roomy-70">
+                            <div class="calendar-weather-wrap">
+                                <div class="calendar-weather-text1" id="calendar-weather-loaction">
+                                    도봉구 쌍문1동의 날씨 정보입니다.
+                                </div>
+                                <div class="calendar-weather-text2">
+                                    <div class="temperature" id="calendar-weather-temp">
+                                        현재온도15℃
+                                    </div>
+                                    <div class="temperature-etc" id="calendar-weather-etc">
+                                        구름많음<br>
+                                    </div>
+                                </div>
+                                <div class="calendar-weather-image"><img src="../public/assets/images/weather/weather.jpg" alt=""></div>
+                            </div>
+
+
+                            <div class="calendar">
+                                <h2 class="calendar-ment">CALENDAR</h2>
+                                <div class="calendar-ment2">
+                                    <h6 id="calendar-ment2">일정과 코디를 업로드해보세요.</h6>
+                                    <h6 id="calendar-ment2">당신의 코디를 겹치지 않도록 도와주고, 쇼핑이 필요한 일정을 모아볼 수 있습니다.</h6>
+                                </div>
+                        
+
+                                <div class="header">
+                                    <div class="year-month"></div>
+                                    <div class="nav2">
+                                        <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+                                        <button class="nav-btn go-today" onclick="goToday()">Today</button>
+                                        <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+                                    </div>
+                                    <div class="nav3">
+                                        
+                                        <div class="btn-add-schedule">
+                                            <button class="add schedule" id="show">일정 추가</button>
+                                        </div>
+                                        <div class="btn-add-cody">
+                                            <button class="add cody" id="show2">코디 업로드</button>
+                                        </div>
+
+                                        {% include "add_codi.html" %}
+                                        {% include "add_schedule.html" %}
+
+                                    </div>
+                                </div>
+                                <div class="main">
+                                    <div class="days">
+                                        <div class="day">일</div>
+                                        <div class="day">월</div>
+                                        <div class="day">화</div>
+                                        <div class="day">수</div>
+                                        <div class="day">목</div>
+                                        <div class="day">금</div>
+                                        <div class="day">토</div>
+                                    </div>
+                                    <div class="dates"></div>
+                                </div>
+                            </div>
+                            <script type="module" src="../public/assets/js/calendar.js"></script>                            
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Featured Section-->
+
+
+
+
+            <!-- 'Schedule Recommend' section -->
+            <section id="features" class="features">
+            <!-- <section class="schedule-recommend-box"> -->
+                <div class="container">
+                    <div class="row">
+                        <div class="main_features fix roomy-70">
+                            <div class="schedule-recommned-ment-box">
+                                <h2 class="schedule-recommend-ment">FAI's RECOMMNEDATION</h2>
+                                <div class="schedule-recommend-ment2">
+                                    <h6 id="schedule-recommend-ment2-schedule">일정을 등록해주세요.</h6>
+                                    <h6 id="schedule-recommend-ment2">FAI가 추천하는 의류를 쇼핑해보세요!</h6>
+                                </div>
+                            </div>
+
+                            <!-- 일정기반 마이클로젯 데이터 추천 -->
+                            <div class="schedule-recommend-box">
+                                <div class="schedule-recommend-ment-box">
+                                    <h2 class="schedule-recommend-ment3">MyCloset</h2>
+                                </div>
+                                <div class="schedule-recommend">
+                                    <div class="lb-wrap">
+                                        <div class="lb-image">
+                                            <a href="mycloset">
+                                                <img src="../public/assets/images/basic.jpg" id="calendar-recommend-mycloset1" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-image">
+                                            <a href="mycloset">
+                                                <img src="../public/assets/images/basic.jpg" id="calendar-recommend-mycloset2" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-image">
+                                            <a href="mycloset">
+                                                <img src="../public/assets/images/basic.jpg" id="calendar-recommend-mycloset3" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-image">
+                                            <a href="mycloset">
+                                                <img src="../public/assets/images/basic.jpg" id="calendar-recommend-mycloset4" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Featured Section-->
+
+
+            <!-- 'Schedule Recommend' section -->
+            <section id="features" class="features">
+                <!-- <section class="schedule-recommend-box"> -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="main_features fix roomy-70">
+                                <!-- 일정기반 크롤링 데이터 추천 -->
+                                <div class="schedule-recommend-box">
+                                    <div class="schedule-recommend-ment-box">
+                                        <h2 class="schedule-recommend-ment3">NEW</h2>
+                                    </div>
+                                    <div class="schedule-recommend">
+                                        <div class="lb-wrap">
+                                            <!-- <div class="lb-text">
+                                                브랜드 or 가격
+                                            </div> -->
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link1" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img1" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price1">-</h6>
+                                            </div>
+                                        </div>
+                                        <div class="lb-wrap">
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link2" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img2" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price2">-</h6>
+                                            </div>
+                                        </div>
+                                        <div class="lb-wrap">
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link3" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img3" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price3">-</h6>
+                                            </div>
+                                        </div>
+                                        <div class="lb-wrap">
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link4" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img4" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price4">-</h6>
+                                            </div>
+                                        </div>
+                                        <div class="lb-wrap">
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link5" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img5" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price5">-</h6>
+                                            </div>
+                                        </div>
+                                        <div class="lb-wrap">
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link6" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img6" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price6">-</h6>
+                                            </div>
+                                        </div>
+                                        <div class="lb-wrap">
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link7" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img7" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price7">-</h6>
+                                            </div>
+                                        </div>
+                                        <div class="lb-wrap">
+                                            <div class="lb-image">
+                                                <a id="calendar-recommend-link8" href="https://shopping.naver.com/home" target="_blank">
+                                                    <img id="calendar-recommend-img8" src="../public/assets/images/basic.jpg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="port_caption m-top-20">
+                                                <h6 id="calendar_clothes_price8">-</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End off row -->
+                    </div><!-- End off container -->
+                </section><!-- End off Featured Section-->
+
+        </div>
+        {% include "footer.html" %}
+
+        <!-- JS includes -->
+
+        <script src="../public/assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="../public/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="../public/assets/js/jquery.magnific-popup.js"></script>
+        <script src="../public/assets/js/jquery.easing.1.3.js"></script>
+        <script src="../public/assets/js/bootsnav.js"></script>
+        <script src="../public/assets/js/plugins.js"></script>
+        <script src="../public/assets/js/main.js"></script>
+
+    </body>
+</html>

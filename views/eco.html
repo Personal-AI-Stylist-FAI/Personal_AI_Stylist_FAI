@@ -1,0 +1,233 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fashion AI, FAI</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="../public/assets/images/greenFAIchar.png">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+        <link rel="stylesheet" href="../public/assets/css/animate.css">
+        <link rel="stylesheet" href="../public/assets/css/iconfont.css">
+        <link rel="stylesheet" href="../public/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../public/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="../public/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../public/assets/css/bootsnav.css">
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="../public/assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="../public/assets/css/style.css">
+
+        <!-- Made by SeoYeon css-->
+        <link rel="stylesheet" href="../public/assets/css/eco.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="../public/assets/css/responsive.css" />
+    </head>
+    
+    <body data-spy="scroll" data-target="#navbar-menu" data-offset="110">
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed no-background white">
+                <!-- Start Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+
+
+                <div class="container"> 
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div> 
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <div class="mainLogoDiv">
+                                <img src="../public/assets/images/index/greenFAIchar.png" class="ImgMainTopLogo" alt="">
+                                <img src="../public/assets/images/index/greenLogo.png" class="ImgMainTopLogo" alt="">
+                            </div>
+
+                            <!-- <img src="..//images/logo.png" class="logo" alt=""> -->
+                            <!--<img src="../assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li><a href="/" id="home">Home</a></li>                    
+                            <li><a href="calendar" id="calendar">Calendar</a></li>
+                            <li><a href="eco" id="eco">Eco</a></li>
+                            <li><a href="shop" id="shop">Shop</a></li>
+                            <li><a href="mycloset" id="mycloset">MyCloset</a></li>
+
+                            <!--<li><a href="#contact">Contact</a></li>-->
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div> 
+            </nav>
+
+
+            <!--product section-->
+            <!-- 'Eco' section -->
+            <section id="business" class="product text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_features fix roomy-80">
+                            <!-- 에코 이슈 배너 슬라이더 -->
+                            <div class="eco_issue">
+                                <h2>ECO ISSUES</h2>
+                                <div class="slider-1">
+                                    <div class="slides">
+                                        <div class="active" style="background-image:url(../public/assets/images/eco/eco1.png);"></div>
+                                        <div style="background-image:url(../public/assets/images/eco/eco2.png);" ></div>
+                                        <div style="background-image:url(../public/assets/images/eco/eco3.png);"></div>
+                                        <div style="background-image:url(../public/assets/images/eco/eco4.png);" onclick='move()'></div>
+                                    </div>
+                                    <div class="page-btns">
+                                        <div class="active"></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="side-btns">
+                                        <div>
+                                            <span><i class="fas fa-angle-left"></i></span>
+                                        </div>
+                                        <div>
+                                            <span><i class="fas fa-angle-right"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="../public/assets/js/eco.js"></script>
+                            </div>
+                        <!--중고거래 마켓 
+                            <div class="market">
+                                <h2>ECO MARKET</h2>
+                                <div class="cloth">
+                                    <div class="lb-wrap">
+                                        <div class="lb-text">
+                                            사이즈 미스로 3만원에 팝니다.
+                                        </div>
+                                        <div class="lb-image"><img src="../assets/images/eco/eco-pants1.png" alt=""></div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-text">
+                                            시착만 해봤어요.
+                                        </div>
+                                        <div class="lb-image"><img src="../assets/images/eco/eco-top2.png" alt=""></div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-text">
+                                            무료나눔이요.
+                                        </div>
+                                        <div class="lb-image"><img src="../assets/images/eco/eco-top3.png" alt=""></div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-text">
+                                            보증서 있습니다.
+                                        </div>
+                                        <div class="lb-image"><img src="../assets/images/eco/eco-onepiece2.png" alt=""></div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-text">
+                                            착용감 좀 있어요.
+                                        </div>
+                                        <div class="lb-image"><img src="../assets/images/eco/eco-pants3.png" alt=""></div>
+                                    </div>
+                                    <div class="lb-wrap">
+                                        <div class="lb-text">
+                                            직접 리사이클링 한 옷이에요!
+                                        </div>
+                                        <div class="lb-image"><img src="../assets/images/eco/eco-onepiece3.png" alt=""></div>
+                                    </div>
+                                </div>
+                            </div >
+                        -->
+                        <!-- 뉴스레터 및 영상 링크-->
+                        <br>
+                        <br>
+                        <h2>ECO NEWS</h2>
+                        <a href="https://harpersbazaar.co.kr/article/70315"><img width = 600, height = 300 src="../public/assets/images/eco/news2.png"/></a> <br><br>
+                        <a href="https://www.newspenguin.com/news/articleView.html?idxno=12173"><img width = 600, height = 300 src="../public/assets/images/eco/news3.png"/></a><br><br>
+                        <a href="https://www.youtube.com/watch?v=aopyc8cAFzQ"><img width = 600, height = 300 src="../public/assets/images/eco/youtube1.png"/></a><br><br>
+                        <a href="https://www.youtube.com/watch?v=Ac4SVnBZIBM"><img width = 600, height = 300 src="../public/assets/images/eco/youtube2.png"/></a><br><br>
+                        <a href="https://www.bbc.com/korean/features-63025634"><img width = 600, height = 300 src="../public/assets/images/eco/news1.png"/></a><br><br>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Product section -->
+
+
+            <footer>
+                <!--<div class="action-lage"></div>-->
+                <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+                    <div class="col-md-12">
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            Made with 
+                            <i class="fa fa-heart"></i>
+                            by 
+                            <a target="_blank" href="#">D.U.C.E</a> 
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+
+
+        </div>
+        
+
+        <!-- JS includes -->
+
+        <script src="../public/assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="../public/assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="../public/assets/js/jquery.magnific-popup.js"></script>
+        <script src="../public/assets/js/jquery.easing.1.3.js"></script>
+        <script src="../public/assets/js/bootsnav.js"></script>
+
+
+
+        <script src="../public/assets/js/plugins.js"></script>
+        <script src="../public/assets/js/main.js"></script>
+
+    </body>
+</html>

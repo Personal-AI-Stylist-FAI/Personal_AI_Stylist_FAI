@@ -1,0 +1,631 @@
+/*
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+  }
+*/
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.ImgMainTopLogo {
+    height:40px;
+    width: 40px;
+}
+.mainLogoDiv{
+    height: 120px;
+    width: 120px;
+    text-align: center;
+}
+
+/* 날씨 */
+.weather {
+    width: 60%;
+    height: 100px;
+    margin: 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.today_weather1 {
+    display: flex;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/* 캘린더 */
+.calendar {
+    width: 90%;
+    margin: 50px;
+    margin-top: 120px;
+    /* margin-bottom: 40px; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-ment {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 60px;
+}
+
+.calendar-ment2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 90px;
+}
+#calendar-ment2 {  
+    color: #808080;
+}
+
+
+/* 일정 기반 추천 - 멘트 */
+.schedule-recommend-ment {
+    text-align: center;
+    font-size: 40px;
+}
+
+.schedule-recommend-ment-box2 {
+    margin-bottom: 20px;
+}
+
+.schedule-recommend-ment2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 90px;
+}
+#schedule-recommend-ment2 {  
+    color: #808080;
+}
+#schedule-recommend-ment2-schedule {  
+    color: #808080;
+}
+
+.schedule-recommend-ment3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 일정 기반 추천 - 옷 */
+.schedule-recommend-box {
+    /* width: 80%; */
+    height: fit-content;
+    /* margin-left: 200px; */
+    margin-bottom: 90px;
+}
+
+.schedule-recommend {
+    width: 80%;
+    height: fit-content;
+    margin-left: 200px;
+    margin-bottom: 90px;
+}
+
+.cloth {
+    margin-top: 80px;
+}
+
+.lb-wrap {
+    width: fit-content;
+    margin: 20px ;
+    position: relative;
+    float: left;
+}
+.lb-wrap:hover {
+    opacity: 0.5;
+}
+.lb-wrap img {
+    width: 150px;
+    height: 180px;
+    vertical-align: middle;
+}
+.lb-image {
+    width: 150px;
+    height: 180px;
+}
+.lb-text {
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: #616161;
+    color: #FFFFFF;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* 일정 추가 팝업 */
+/* 코디 사진 추가 팝업 */
+.background, .background2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    /* 숨기기 */
+    z-index: -1;
+    opacity: 0;
+}
+
+.show, .show2 {
+    opacity: 1;
+    z-index: 1000;
+    transition: all .5s;
+}
+
+.window, .window2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.popup, .popup2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+    /* 임시 지정 */
+    width: 330px;
+    /*height: 380px;*/
+    height: fit-content;
+
+    /* 초기에 약간 아래에 배치 */
+    transform: translate(-50%, -40%);
+}
+
+.show .popup, .show2 .popup2 {
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+}
+
+/* Date Picker */
+.date-picker {
+    margin: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.date-picker-ment {
+    font-size : 15px;
+    margin : 20px;
+    font-weight : bold;
+    color : rgb(50, 50, 50);
+}
+
+/* 일정 선택 드롭다운 */
+.schedule-picker, .cody-picker2 {
+    text-align: center;
+}
+
+.dropdown-label {
+    font-size : 15px;
+    margin : 10px;
+    margin-bottom: 20px;
+    font-weight : bold;
+    color : rgb(50, 50, 50);
+}
+
+.dropdown {
+    position : relative;
+    display : inline-block;
+    align-items: center;
+}
+
+.dropbtn_icon {
+    font-family : 'Material Icons';
+}
+.dropbtn {
+    display : block;
+    border : 1px solid rgb(94, 94, 94);
+    border-radius : 4px;
+    background-color: #fcfcfc;
+    font-weight: 400;
+    color : rgb(124, 124, 124);
+    padding : 12px;
+    width :150px;
+    height: 50px;
+    text-align: left;
+    cursor : pointer;
+    font-size : 12px;
+    z-index :1;
+    position : relative;
+}
+.dropdown-content {
+    display : none;
+    font-weight: 400;
+    background-color: #fcfcfc;
+    min-width : 150px;
+    border-radius: 8px;
+    height : 160px;
+    overflow : scroll;
+    box-shadow: 0px 0px 10px 3px rgba(190, 190, 190, 0.6);
+}
+.dropdown-content::-webkit-scrollbar {
+    width : 5px;
+    height : 10px;
+}
+.dropdown-content::-webkit-scrollbar-thumb {
+    border-radius : 2px;
+    background-color :rgb(194, 194, 194)
+}
+
+.dropdown-content div {
+    display : block;
+    text-decoration : none;
+    color : rgb(37, 37, 37);
+    font-size: 12px;
+    padding : 12px 20px;
+}
+.dropdown-content div:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.dropdown-content.show {
+    display : block;
+}
+
+.dropbtn_click {
+    font-family: Material Icons;
+    font-size : 10px;
+    color : #3b3b3b;
+    float:right;
+}
+.dropbtn_click:hover {
+    opacity: 50%;
+}
+
+
+/* 코디 사진 추가 버튼 */
+.btn-close-box, .btn-box2 {
+    text-align: center;
+    margin: 30px;
+}
+.btn-add, .btn-add2 {
+    padding: 8px;
+    margin: 20px;
+    text-align: center;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #000000;
+    background-color: #A3DDCB;
+}
+.btn-add:hover, .btn-add2:hover {
+    opacity: 50%;
+}
+
+/* 닫기 버튼 */
+.btn-close, .btn-close2 {
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    text-align: center;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 13px;
+    background-color: #A3DDCB;
+}
+.btn-close:hover, .btn-close2:hover {
+    opacity: 50%;
+}
+/* 일정 추가 팝업 끝 */
+
+/* Date Picker */
+.date-picker2 {
+    margin: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.date-picker-ment2, .cody-label2 {
+    font-size : 15px;
+    margin : 20px;
+    font-weight : bold;
+    color : rgb(50, 50, 50);
+}
+
+/* 의류 이미지 선택 */
+.imageupload2 {
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 40px;
+    width: 250px;
+    text-align: center;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 13px;
+    background-color: #A3DDCB;
+}
+/* 코디 사진 추가 팝업 끝 */
+
+
+.year-month {
+    font-size: 16px;
+    /*font-weight: 500;*/
+    font-weight: bold;
+    background-color: #A3DDCB;
+    border-radius: 10px;
+    padding: 10px;
+    opacity: 70%;
+}
+  
+.nav2 {
+    display: flex;
+    /*
+    border: 1px solid #A3DDCB;
+    border-radius: 5px;
+    */
+}
+  
+.nav-btn {
+    width: 28px;
+    height: 30px;
+    border: none;
+    font-size: 5px;
+    line-height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+}
+  
+.go-today {
+    width: 75px;
+    font-weight: bold;
+    font-size: 15px;
+    /*
+    border-left: 1px solid #A3DDCB;
+    border-right: 1px solid #A3DDCB;
+    */
+}
+.go-today:hover {
+    opacity: 50%;
+}
+
+.go-prev {
+    font-weight: bold;
+    font-size: 15px;
+}
+.go-prev:hover {
+    opacity: 50%;
+}
+
+.go-next {
+    font-weight: bold;
+    font-size: 15px;
+}
+.go-next:hover {
+    opacity: 50%;
+}
+
+.btn-add-cody {
+    border-radius: 10px;
+    background-color: #A3DDCB;
+    float: right;
+    margin: 10px;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.btn-add-cody:hover {
+    opacity: 0.5;
+}
+
+.cody {
+    border: none;
+    font-size: 15px;
+    line-height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-add-schedule {
+    border-radius: 10px;
+    background-color: #A3DDCB;
+    float: right;
+    margin: 10px;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.btn-add-schedule:hover {
+    opacity: 0.5;
+}
+
+.schedule {
+    border: none;
+    font-size: 15px;
+    line-height: 34px;
+    background-color: transparent;
+    cursor: pointer;
+}
+/*
+.nav3 {
+    border-radius: 50%;
+    background-color: #A3DDCB;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.add {
+    border-radius: 50%;
+    background-color: #A3DDCB;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.add:hover {
+    opacity: 50%;
+}
+*/
+.days {
+    display: flex;
+    margin: 25px 0 10px;
+}
+  
+.day {
+    width: calc(100% / 7);
+    text-align: center;
+}
+  
+.dates {
+    display: flex;
+    flex-flow: row wrap;
+    height: 1000px;
+    border-top: 1px solid #A3DDCB;
+    border-right: 1px solid #A3DDCB;
+}
+  
+.date {
+    width: calc(100% / 7);
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #A3DDCB;
+    border-left: 1px solid #A3DDCB;
+}
+
+.other {
+    opacity: .3;
+}
+
+/* 토, 일 색 다르게 할 것인가 */
+/*
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+  color: #D13E3E;
+}
+
+.day:nth-child(7n),
+.date:nth-child(7n) {
+  color: #396EE2;
+}
+*/
+
+.today {
+    position: relative;
+    background-color: #A3DDCB;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px;
+}
+  
+.today::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #A3DDCB;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+}
+
+/* 각 날짜의 일정 */
+.schedule-box {
+    width: fit-content;
+    margin-top: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15%;
+    background-color: #FFFFFF;
+}
+.schedule {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/* 각 날짜의 코디 사진 */
+.cody-box {
+    width: calc(100% / 7) - 10px;
+    height: 130px;
+    margin-top: 10px;
+}
+.cody-image {
+    width: max-content;
+    height: 130px;
+}
+
+
+/* 날씨 */
+.calendar-weather-wrap {
+    width: 85%;
+    margin: 20px auto;
+    position: relative;
+}
+.calendar-weather-wrap img {
+    width: 100%;
+    height: 250px;
+    vertical-align: middle;
+}
+.calendar-weather-text1 {
+    /*padding: 10px 10px;
+    text-align: center;*/
+    font-size: 38px;
+    font-weight: bold;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+.calendar-weather-text2 {
+    padding: 20px 40px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    font-size: 12px;
+    color: #808080;
+    background-color: rgba(256, 256, 256, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.temperature {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.temperature-etc {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;  
+}
+
+
+@media(max-width:440px) {
+    .calendar-weather-wrap {
+        width: 95%;
+    }
+}

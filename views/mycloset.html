@@ -1,0 +1,519 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fashion AI, FAI</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="../public/assets/images/greenFAIchar.png">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+
+        <link rel="stylesheet" href="../public/assets/css/animate.css">
+        <link rel="stylesheet" href="../public/assets/css/iconfont.css">
+        <link rel="stylesheet" href="../public/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../public/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="../public/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../public/assets/css/bootsnav.css">
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="../public/assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="../public/assets/css/style.css">
+
+        <!-- Made by SeoYeon css-->
+        <link rel="stylesheet" href="../public/assets/css/mycloset.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="../public/assets/css/responsive.css" />
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    </head>
+    
+    <body data-spy="scroll" data-target="#navbar-menu" data-offset="110">
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed no-background white">
+                <!-- Start Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+
+
+                <div class="container"> 
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div> 
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <div class="mainLogoDiv">
+                                <img src="../public/assets/images/greenFAIchar.png" class="ImgMainTopLogo" alt="">
+                                <img src="../public/assets/images/greenLogo.png" class="ImgMainTopLogo" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/" id="home">Home</a></li>                    
+                            <li><a href="calendar" id="calendar">Calendar</a></li>
+                            <li><a href="eco" id="eco">Eco</a></li>
+                            <li><a href="shop" id="shop">Shop</a></li>
+                            <li><a href="mycloset" id="mycloset">MyCloset</a></li>
+                            <!--<li><a href="#contact">Contact</a></li>-->
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div> 
+            </nav>
+
+
+
+            
+            <!-- 'Mycloset' section -->
+            <section id="product" class="product text-center">
+                <div class="container">
+                    <div class="main_product roomy-80">
+                        <div class="closet-wrap">
+                            <div class="closet-text">
+                                MyCloset
+                            </div>
+                            <div class="closet-image"><img src="../public/assets/images/closet/closet1.jpg" alt=""></div>
+                        </div>
+                        
+                            <div class="closet-ment" id="closet_ment_username">
+                                덕성님의 Closet
+                            </div>
+                            <div class="nav3">
+                                <button class="nav-btn add" id="show">+</button>
+                            </div>
+                        
+                        
+
+                        <!-- 의류 등록 팝업 -->
+                        <div>
+                            <!-- 의류 등록 팝업 -->
+                            <div class="background">
+                                <div class="window">
+                                    <div class="popup">
+                                        <!-- 의류 이미지 선택 -->
+                                        <form action="/mycloset/add" method="post" enctype="multipart/form-data">
+                                        <div class="cloth-picker">
+                                            <div class="upload-label">
+                                                등록할 옷 사진을 선택하세요.
+                                                <!-- <span style="font-family: Material Icons;">restaurant</span> -->
+                                            </div>
+                                            <div>
+                                                <input type="file" name="closetimage" id="fileUpload" class="imageupload" accept="image/*" multiple="multiple" />
+                                                <img id="previewImg" width="200"  />
+                                            </div>
+                                        </div>
+                                          <div>
+                                            <button type="submit" class="btn-add" id="add">옷 추가하기</button>
+                                            </div>
+                                        </form>
+                                       <div>
+                                            <button class="btn-close" id="close">닫기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script src="../public/assets/js/mycloset.js"></script>
+
+
+
+
+                        <!-- top -->
+                        <div>
+                            <div id="cloth">상의</div>
+                            <div id="carousel-example-generic-top" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="port_item xs-m-top-30">
+                                                        <div class="port_img">
+                                                            <img src="../public/assets/images/basic.jpg" id="mycloset_top1" alt="" height="100%" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="port_item xs-m-top-30">
+                                                        <div class="port_img">
+                                                            <img src="../public/assets/images/basic.jpg" id="mycloset_top2" alt="" height="100%" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="port_item xs-m-top-30">
+                                                        <div class="port_img">
+                                                            <img src="../public/assets/images/basic.jpg" id="mycloset_top3" alt="" height="100%" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="port_item xs-m-top-30">
+                                                        <div class="port_img">
+                                                            <img src="../public/assets/images/basic.jpg" id="mycloset_top4" alt="" height="100%" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="port_item xs-m-top-30">
+                                                        <div class="port_img">
+                                                            <img src="../public/assets/images/basic.jpg" id="mycloset_top5" alt="" height="100%" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="port_item xs-m-top-30">
+                                                        <div class="port_img">
+                                                            <img src="../public/assets/images/basic.jpg" id="mycloset_top6" alt="" height="100%" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <!-- 추가된 의류 사진 들어올 곳 -->
+                                                <div class="col-sm-4" id="new-add-cloth"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic-top" role="button" data-slide="prev">
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+
+                                <a class="right carousel-control" href="#carousel-example-generic-top" role="button" data-slide="next">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- pants -->
+                        <div id="cloth">하의</div>
+                        <div id="carousel-example-generic-bottom" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_bottom1" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_bottom2" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_bottom3" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_bottom4" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_bottom5" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_bottom6" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 추가된 의류 사진 들어올 곳 -->
+                                            <div class="col-sm-4" id="new-add-cloth"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic-bottom" role="button" data-slide="prev">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <a class="right carousel-control" href="#carousel-example-generic-bottom" role="button" data-slide="next">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <!-- onepiece -->
+                        <div id="cloth">원피스</div>
+                        <div id="carousel-example-generic-onepiece" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_onepiece1" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_onepiece2" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_onepiece3" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_onepiece4" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_onepiece5" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_onepiece6" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 추가된 의류 사진 들어올 곳 -->
+                                            <div class="col-sm-4" id="new-add-cloth"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic-onepiece" role="button" data-slide="prev">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <a class="right carousel-control" href="#carousel-example-generic-onepiece" role="button" data-slide="next">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <!-- outer -->
+                        <div id="cloth">아우터</div>
+                        <div id="carousel-example-generic-outer" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_outer1" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_outer2" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_outer3" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_outer4" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_outer5" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="port_item xs-m-top-30">
+                                                    <div class="port_img">
+                                                        <img src="../public/assets/images/basic.jpg" id="mycloset_outer6" alt="" height="100%" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 추가된 의류 사진 들어올 곳 -->
+                                            <div class="col-sm-4" id="new-add-cloth"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic-outer" role="button" data-slide="prev">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <a class="right carousel-control" href="#carousel-example-generic-outer" role="button" data-slide="next">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Product section -->
+
+
+
+            <footer>
+                <!--<div class="action-lage"></div>-->
+                <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+                    <div class="col-md-12">
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            Made with 
+                            <i class="fa fa-heart"></i>
+                            by 
+                            <a target="_blank" href="#">D.U.C.E</a> 
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+        
+
+        <!-- JS includes -->
+
+        <script src="../public/assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="../public/assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="../public/assets/js/jquery.magnific-popup.js"></script>
+        <script src="../public/assets/js/jquery.easing.1.3.js"></script>
+        <script src="../public/assets/js/bootsnav.js"></script>
+
+        <script src="../public/assets/js/plugins.js"></script>
+        <script src="../public/assets/js/main.js"></script>
+
+    </body>
+</html>

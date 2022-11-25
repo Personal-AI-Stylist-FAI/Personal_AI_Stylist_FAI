@@ -1,0 +1,131 @@
+/************************************************
+*                                               *
+*             made by CY _ stylesheet           *
+*                                               *
+************************************************/
+
+/*Start Header Navigation */
+/*MAIN PAGE IMG-TopGreen Logo*/
+.ImgMainTopLogo {
+    height:40px;
+    width: 40px;
+}
+.mainLogoDiv{
+    height: 120px;
+    width: 120px;
+    text-align: center;
+}
+
+
+/*MAIN PAGE BTN-Signin*/       
+.BtnSignin {
+	background-color:#a3ddcb;
+	border-radius:3px;
+	border:2px solid #a3ddcb;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	padding:15px 60px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #a3ddcb;
+}
+.BtnSignin:hover {
+	background-color:#a3ddcb;
+}
+.BtnSignin:active {
+	position:relative;
+	top:1px;
+}
+
+/*MAIN PAGE BTN-Signup*/
+.BtnSignup {
+	background-color:transparent;
+	border-radius:3px;
+	border:2px solid #a3ddcb;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:15px 60px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #a3ddcb;
+}
+.BtnSignup:hover {
+	background-color:transparent;
+}
+.BtnSignup:active {
+	position:relative;
+	top:1px;
+}
+
+
+/*Dialogue section*/
+/*Main PAGE "FAI+IMG" Mid */
+
+.ImgMainRedLogoImgMid{
+    float: left;
+    height:40px;
+    width: 40px;
+}
+.ImgMainBlackLogoImgMid{
+    float: left;
+    height:40px;
+    width: 40px;
+}
+.midText_FaiPresent{
+    margin:auto;
+    display: flex;
+    justify-content: center;
+}
+.Txt_dailyProblem{
+    text-align: center;
+}
+
+.BtnSchedule {
+	background-color:#a3ddcb;
+	border-radius:3px;
+	border:2px solid #a3ddcb;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:15px 80px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #a3ddcb;
+    position: fixed;
+    bottom: 100px;
+    margin: auto;
+}
+
+.MainTxtpastCody{
+    text-align: center;
+}
+.bg-Sigmint{
+    background-color: #a3ddcb;
+}
+
+.port_item xs-m-top-30 {
+	justify-content : center;
+}
+
+.port_img {
+	display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.team_item xs-m-top-30 {
+	text-align: center;
+	width: 300px;
+    height: 300px;
+}
+
+#nearestCodi {
+	margin-left: 40px;
+	width: 250px;
+    height: 300px;
+}
