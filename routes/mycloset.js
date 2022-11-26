@@ -122,36 +122,74 @@ router.get('/myclosetclothes', isLoggedIn, async (req, res) =>{
   await connection.query(sql, async function(err, result){
     //console.log(result[0].class)
     Classes = [];
+    Color = [];
     ImageURLS = [];
     top = [];
     bottom = [];
     onepiece = [];
     outer = [];
- 
+    
     for (var i=0; i<result.length; i++){
+      End = result[i].length
       Classes[i] = result[i].class[0]
+      if (Classes[i] == 'J'||Classes[i] == 'W'){
+        Color[i] = result[i].class.slice(2, End)
+      }else{
+        Color[i] = result[i].class.slice(1, End)
+      }
       ImageURLS[i] = result[i].image
     }
 
     console.log(Classes)
 
     ClassTop = ['a', 'b', 'c', 'd', 'e', 'f', 'w', 'W']
-    ClassBottom = ['g', 'h', 'J_', 'k', 'l', 'm', 'n']
+    ClassBottom = ['g', 'h', 'J', 'k', 'l', 'm', 'n']
     ClassOnepiece = ['o', 'p', 'q', 'r']
     ClassOuter = ['s', 't', 'u', 'v', 'x', 'y']
 
+    var CN = {
+      'a' : '민소매','b' : '반팔티셔츠','c' : '긴팔티셔츠','d' : '후드티','e' : '긴블라우스',
+      'f' : '반팔블라우스','g' : '반바지','h' : '청바지','J' : '조거팬츠','k' : '슬랙스',
+      'I' : '롱스커트','n' : '정장스커트','m' : '미니스커트','o' : '롱원피스','p' : '숏원피스',
+      'q' : '짧은점프슈트','r' : '긴점프슈트','s' : '코트','t' : '가디건','u' : '패딩',
+      'v' : '자켓','w' : '셔츠','W' : '체크셔츠','x' : '조끼','y' : '점퍼'
+  }
+
+  var CN2 = {
+    'red' : '빨간색', 'orange' : '주황색', 'yellow' : '노랑색','lightgreen' : '연두색',
+    'green' : '초록색','skyblue' : '하늘색','navy' : '남색','gray' : '회색','black' : '검은색',
+    'white' : '흰색','brown' : '갈색','purple' : '보라','pink' : '분홍','ivory' : '아이보리',
+    'blue': '파란색'
+}
+
     for (var i=0; i<Classes.length; i++){
       if (ClassTop.includes(Classes[i]) == true) {
-        top.push(ImageURLS[i])
+        top2 = { url: ImageURLS[i],
+          classname: CN[Classes[i]],
+          color: Color[i]
+        }
+        top.push(top2)
       }
       if (ClassBottom.includes(Classes[i]) == true) {
-        bottom.push(ImageURLS[i])
+        bottom2 = { url: ImageURLS[i],
+          classname: CN[Classes[i]],
+          color: Color[i]
+        }
+        bottom.push(bottom2)
       }
       if (ClassOnepiece.includes(Classes[i]) == true) {
-        onepiece.push(ImageURLS[i])
+        onepiece2 = { url: ImageURLS[i],
+          classname: CN[Classes[i]],
+          color: Color[i]
+        }
+        onepiece.push(onepiece2)
       }
       if (ClassOuter.includes(Classes[i]) == true) {
-        outer.push(ImageURLS[i])
+        outer2 = { url: ImageURLS[i],
+          classname: CN[Classes[i]],
+          color: Color[i]
+        }
+        outer.push(outer2)
       }
     }
 
@@ -162,7 +200,7 @@ router.get('/myclosetclothes', isLoggedIn, async (req, res) =>{
       onepiece: onepiece.slice(0, 6),
       outer: outer. slice(0, 6)
     }
-
+//console.log(myclosetresult)
 
     res.send(myclosetresult)
   })
